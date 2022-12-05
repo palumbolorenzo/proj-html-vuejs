@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <HeaderPage />
     <MainPage />
     <FooterPage />
@@ -23,9 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~bootstrap/dist/css/bootstrap.css';
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
 }
 </style>
