@@ -91,6 +91,55 @@
             <p class="text-uppercase text-white central">view all our causes</p>
         </div>
     </div>
+
+    <div class="fifth">
+        <div class="fifth-container row row-cols-2">
+            <div class="fifth-left col">
+                <div class="big-pic">
+                    <img src="@/img/photo-1444213007800-cff19e1677ac-600x450.jpg" alt="">
+                </div>
+                <div class="description">
+                    <div class="contact-desc">
+                        <h6>The human story of uniqueness</h6>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fifth-right col">
+                <div class="contacts">
+                    <div class="contact">
+                        <img src="@/img/photo-1444664597500-035db93e2323-177x142.jpg" class="img-fluid">
+                        <div class="contact-desc">
+                            <h6>The human story of uniqueness</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="@/img/photo-1447430617419-95715602278e-177x142.jpg" class="img-fluid">
+                        <div class="contact-desc">
+                            <h6>Sustainable trade tactics</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="@/img/photo-1460230525622-630fe3294cd7-177x142.jpg" class="img-fluid">
+                        <div class="contact-desc">
+                            <h6>Farmers making a difference</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <img src="@/img/photo-1460600421604-5e138c208b9c-177x142.jpg" class="img-fluid">
+                        <div class="contact-desc">
+                            <h6>Meeting remote tribes in Peru</h6>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Prasent ac nibh vestibulum, laoreet ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -232,5 +281,36 @@ name: 'MainPage',
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.fifth-container {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    padding: 1rem;
+    border: 1px solid #EBEAEA;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact img {
+    width: 150px;
+}
+
+.contact-desc h6 {
+    color: #FCD66C;
 }
 </style>
