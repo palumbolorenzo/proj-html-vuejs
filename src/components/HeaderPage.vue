@@ -1,5 +1,10 @@
 <template>
   <div class="bg-container">
+    <div class="header">
+        <div class="logo">
+            <img src="@/img/avada-charity-sticky-header-logo.png" alt="">
+        </div>
+    </div>
     <div class="title">
         <h1 class="text-uppercase text-white">Make a difference</h1>
         <p class="text-white">As long as poverty, injustice & inequality persist, none of us can truly rest</p>
@@ -23,14 +28,22 @@ name: 'HeaderPage',
     background-position: center;
     height: 1000px;
     display: flex;
-    align-items: center;
+    /*align-items: center;
     justify-content: center;
+    flex-direction: column;*/
+}
+
+.header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .title {
     text-align: center;
     display: flex;
     flex-direction: column;
+    gap: .8rem;
 }
 
 .buttons {
