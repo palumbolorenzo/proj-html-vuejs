@@ -3,7 +3,7 @@
     <div class="first">
         <div class="left">
             <div class="container">
-                <h1 class="text-uppercase title">every moment counts</h1>
+                <h2 class="text-uppercase title">every moment counts</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia porro inventore adipisci maiores. Nam consequatur earum ea corporis reprehenderit, quisquam explicabo magnam sapiente exercitationem nobis autem recusandae rerum error.</p>
                 <button class="btn text-uppercase">our mission</button>
             </div>
@@ -26,9 +26,13 @@
 
     <div class="second">
         <div class="second-title">
-            <h1 class="text-uppercase text-white values-title">our values</h1>
+            <h2 class="text-uppercase text-white values-title">our values</h2>
+        </div>
+
+        <div class="subtitle">
             <p class="text-white">Think Big. Act Bigger.</p>
         </div>
+
         <div class="second-container">
             <div class="row row-cols-4">
                 <div class="col second-card">
@@ -52,6 +56,39 @@
                     <button class="btn text-uppercase">learn more</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="third">
+        <div class="third-title">
+            <h2 class="text-uppercase causes-title">recent causes</h2>
+        </div>
+
+        <div class="subtitle">
+            <p class="">We run projects in over 30 countries in 5 continents</p>
+        </div>
+
+        <div class="pics-container">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <img src="@/img/avada-charity-fair-trade-featured-600x450.jpg" class="hover">
+                </div>
+                <div class="col">
+                    <img src="@/img/avada-charity-shelter-featured-600x450.jpg" class="hover">
+                </div>
+                <div class="col">
+                    <img src="@/img/avada-charity-farming-featured-600x450.jpg" class="hover">
+                </div>
+                <div class="col">
+                    <img src="@/img/avada-charity-vaccines-featured-600x450.jpg" class="hover">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth">
+        <div>
+            <p class="text-uppercase text-white central">view all our causes</p>
         </div>
     </div>
   </div>
@@ -88,6 +125,7 @@ name: 'MainPage',
 
 .btn:hover {
     background-color: #ca9e26;
+    color: white;
     transition: .5s;
 }
 
@@ -122,7 +160,7 @@ name: 'MainPage',
     margin-top: 5rem;
 }
 
-.second-title {
+.second-title, .third-title {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -139,7 +177,26 @@ name: 'MainPage',
     left: 50%;
     position: absolute;
     transform: translate(-50%, 0);
-    width: 100px;
+    width: 150px;
+}
+
+.causes-title::after {
+    background-color: #FCD66C;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 170px;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .second-card {
@@ -152,5 +209,28 @@ name: 'MainPage',
 .second-card .btn {
     width: max-content;
     margin: 0 auto;
+}
+
+.third {
+    padding: 5rem;
+}
+
+.pics-container {
+    margin-top: 3rem;
+}
+
+.hover:hover {
+    transform: scale(1.05);
+    filter: brightness(75%);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.fourth {
+    background-color: #ED6864;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

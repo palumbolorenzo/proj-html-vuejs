@@ -1,8 +1,8 @@
 <template>
   <div class="bg-container">
     <div class="header">
-        <div class="logo">
-            <img src="@/img/avada-charity-sticky-header-logo.png" alt="">
+        <div>
+            <img src="@/img/avada-charity-sticky-header-logo.png" class="logo">
         </div>
     </div>
     <div class="title">
@@ -27,23 +27,33 @@ name: 'HeaderPage',
     background-image: url('@/img/home-page-slider.jpg');
     background-position: center;
     height: 1000px;
-    display: flex;
     /*align-items: center;
     justify-content: center;
     flex-direction: column;*/
 }
 
 .header {
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 .title {
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: .8rem;
+    height: calc(1000px - 250px);
 }
 
 .buttons {
