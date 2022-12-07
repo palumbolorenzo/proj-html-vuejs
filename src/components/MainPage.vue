@@ -306,6 +306,17 @@ name: 'MainPage',
     gap: 1rem;
 }
 
+.fifth-left:hover {
+    cursor: pointer;
+}
+
+.contact:hover {
+    transform: scale(1.025);
+    transition: .8s;
+    cursor: pointer;
+    box-shadow: 10px 5px 5px rgb(173, 173, 173);
+}
+
 .contact img {
     width: 150px;
 }
