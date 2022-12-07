@@ -88,11 +88,21 @@
 
     <div class="fourth">
         <div>
-            <p class="text-uppercase text-white central">view all our causes</p>
+            <h6 class="text-uppercase text-white central">view all our causes</h6>
         </div>
     </div>
 
     <div class="fifth">
+        <div class="fifth-title-cont">
+            <div class="fifth-title">
+                <h2 class="text-uppercase articles-title">latest articles</h2>
+            </div>
+
+            <div class="subtitle">
+                <p class="">Together we make all the difference</p>
+            </div>
+        </div>
+
         <div class="fifth-container row row-cols-2">
             <div class="fifth-left col">
                 <div class="big-pic">
@@ -138,6 +148,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="button-container">
+            <button class="btn article-btn text-uppercase">view all our articles</button>
         </div>
     </div>
   </div>
@@ -209,7 +222,7 @@ name: 'MainPage',
     margin-top: 5rem;
 }
 
-.second-title, .third-title {
+.second-title, .third-title, .fifth-title {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -230,6 +243,18 @@ name: 'MainPage',
 }
 
 .causes-title::after {
+    background-color: #FCD66C;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 170px;
+}
+
+.articles-title::after {
     background-color: #FCD66C;
     bottom: 0;
     content: '';
@@ -284,7 +309,7 @@ name: 'MainPage',
 }
 
 .fifth-container {
-    padding: 5rem;
+    padding: 3rem 10rem;
     display: flex;
     justify-content: center;
 }
@@ -323,5 +348,25 @@ name: 'MainPage',
 
 .contact-desc h6 {
     color: #FCD66C;
+}
+
+.fifth-title-cont {
+    padding-top: 3rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.btn, .article-button {
+    background-color: #ED6864;
+    width: calc(100% - 20rem);
+
+}
+
+.btn:hover, .article-button:hover {
+    background-color: #f07d79;
 }
 </style>
