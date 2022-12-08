@@ -1,27 +1,83 @@
 <template>
   <div>
     <div class="first">
-        <div class="first-title-cont">
-            <div class="first-title">
-                <h2 class="text-uppercase title text-white">change a life today</h2>
-            </div>
-
-            <div class="subtitle text-white">
-                <p class="">As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life. Het in touch today and start making the difference.</p>
-            </div>
-
-            <div class="buttons">
-                <button class="btn text-uppercase">volunteer</button>
-                <button class="btn text-uppercase">donate now</button>
-            </div>
+      <div class="first-title-cont">
+        <div class="first-title">
+          <h2 class="text-uppercase title text-white">
+            change a life today
+          </h2>
         </div>
+
+        <div class="subtitle text-white">
+          <p class="">
+            As long as poverty, injustice & inequality persist, none of us can truly rest. It doesn't take much to change a life. Het in touch today and start making the difference.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <button class="btn text-uppercase">
+            volunteer
+          </button>
+          <button class="btn text-uppercase">
+            donate now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="second">
+      <div class="logo-container">
+        <img
+          src="@/img/avada-charity-mobile-logo-retina.png"
+          class="logo"
+        >
+      </div>
+    </div>
+
+    <div class="third">
+      <div class="socials">
+        <ul>
+          <li
+            v-for="objSocial in arrSocials"
+            :key="objSocial"
+            :class="arrSocials.logo"
+          >
+            {{ arrSocials.logo }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fourth">
+      <font-awesome-icon icon="fa-brands fa-facebook" />
+      <font-awesome-icon icon="fa-brands fa-instagram" />
+      <font-awesome-icon icon="fa-brands fa-twitter" />
+      <font-awesome-icon icon="fa-brands fa-youtube" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-name: 'FooterPage'
+name: 'FooterPage',
+data() {
+    return {
+        arrSocials: [
+            {
+                logo: 'fa-brands fa-twitter'
+            },
+            {
+                logo: 'fa-brands fa-twitter'
+            },
+            {
+                logo: 'fa-brands fa-twitter'
+            },
+            {
+                logo: 'fa-brands fa-twitter'
+            },
+        ]
+    }
+}
 }
 </script>
 
@@ -84,5 +140,27 @@ name: 'FooterPage'
     border: 1px solid #FCD66C;
     color: #FCD66C;
     transition: .5s;
+}
+
+.second {
+    padding: 2rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.logo:hover {
+    transform: scale(1.025);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    background-color: #FCD66C;
+    height: 50px;
 }
 </style>

@@ -1,17 +1,46 @@
 <template>
   <div class="bg-container">
     <div class="header">
-        <div>
-            <img src="@/img/avada-charity-sticky-header-logo.png" class="logo">
-        </div>
+      <div>
+        <img
+          src="@/img/avada-charity-sticky-header-logo.png"
+          class="logo"
+        >
+      </div>
+
+      <ul class="links">
+        <li
+          v-for="objLink in arrLinks"
+          :key="objLink"
+          class="text-uppercase link"
+        >
+          {{ objLink.link }}
+        </li>
+        <li>
+          <a
+            href="#!"
+            class="upper-btn text-uppercase"
+          >
+            donate
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="title">
-        <h1 class="text-uppercase text-white">Make a difference</h1>
-        <p class="text-white">As long as poverty, injustice & inequality persist, none of us can truly rest</p>
-        <div class="buttons">
-            <button class="btn text-uppercase">our mission</button>
-            <button class="btn text-uppercase">donate now</button>
-        </div>
+      <h1 class="text-uppercase text-white">
+        Make a difference
+      </h1>
+      <p class="text-white">
+        As long as poverty, injustice & inequality persist, none of us can truly rest
+      </p>
+      <div class="buttons">
+        <button class="btn text-uppercase">
+          our mission
+        </button>
+        <button class="btn text-uppercase">
+          donate now
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +48,25 @@
 <script>
 export default {
 name: 'HeaderPage',
+
+data() {
+    return {
+        arrLinks: [
+            {
+                link: 'home'
+            },
+            {
+                link: 'mission'
+            },
+            {
+                link: 'causes'
+            },
+            {
+                link: 'journal'
+            },
+        ]
+    }
+}
 }
 </script>
 
@@ -72,6 +120,37 @@ name: 'HeaderPage',
 .btn:hover {
     border: 1px solid #FCD66C;
     color: #FCD66C;
+    transition: .5s;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+}
+
+.link:hover {
+    color: #FCD66C;
+    border-bottom: 2px solid #FCD66C;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.upper-btn {
+    text-decoration: none;
+    color: white;
+    background-color: #FCD66C;
+    padding: .4rem 1rem;
+}
+
+.upper-btn:hover {
+    background-color: #ca9e26;
     transition: .5s;
 }
 </style>
