@@ -3,13 +3,17 @@
     <div class="first">
       <div class="left">
         <div class="container">
-          <h2 class="text-uppercase title">
-            every moment counts
-          </h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia porro inventore adipisci maiores. Nam consequatur earum ea corporis reprehenderit, quisquam explicabo magnam sapiente exercitationem nobis autem recusandae rerum error.</p>
-          <button class="btn text-uppercase">
-            our mission
-          </button>
+          <div class="first-title">
+            <h2 class="text-uppercase moment-title">
+              every moment counts
+            </h2>
+            <p>Curabitur non mi et turpis pharetra vulputate. Cras consequat, risus nec commodo vehicula, nisi est laoreet leo, ac convallis nisi nibh id velit. Aliquam mattis metus a nisi pretium.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac nobh vestibulum, laoreet ipsum quis, vestibulum nisi. Curabitur non mi et turpis pharetra vulputate. Cras consequat, risus nec commodo vehicula, nisi est laoreet leo, ac convallis nisi nibh id velit. Aliquam mattis metus a nisi pretium.</p>
+            <p>Curabitur non mi et turpis pharetra vulputate. Cras consequat, risus nec commodo vehicula, nisi est laoreet leo, ac convallis nisi nibh id velit. Aliquam mattis metus a nisi pretium.</p>
+            <button class="btn text-uppercase">
+              our mission
+            </button>
+          </div>
         </div>
       </div>
       <div class="right">
@@ -50,11 +54,14 @@
       <div class="second-container">
         <div class="row row-cols-4">
           <div class="col second-card">
-            <h3 class="text-white">
+            <h1>
               <font-awesome-icon
                 icon="fa-solid fa-droplet"
                 class="gold"
-              /> Clean Water
+              />
+            </h1>
+            <h3 class="text-white">
+              Clean Water
             </h3>
             <p class="text-white">
               Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.
@@ -64,11 +71,14 @@
             </button>
           </div>
           <div class="col second-card">
-            <h3 class="text-white">
+            <h1>
               <font-awesome-icon
                 icon="fa-solid fa-stethoscope"
                 class="gold"
-              /> Vaccinations
+              /> 
+            </h1>
+            <h3 class="text-white">
+              Vaccinations
             </h3>
             <p class="text-white">
               Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.
@@ -78,11 +88,14 @@
             </button>
           </div>
           <div class="col second-card">
-            <h3 class="text-white">
+            <h1>
               <font-awesome-icon
                 icon="fa-solid fa-graduation-cap"
                 class="gold"
-              /> Education
+              /> 
+            </h1>
+            <h3 class="text-white">
+              Education
             </h3>
             <p class="text-white">
               Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.
@@ -92,11 +105,14 @@
             </button>
           </div>
           <div class="col second-card">
-            <h3 class="text-white">
+            <h1>
               <font-awesome-icon
                 icon="fa-solid fa-seedling"
                 class="gold"
-              /> Farming
+              /> 
+            </h1>
+            <h3 class="text-white">
+              Farming
             </h3>
             <p class="text-white">
               Nullam convallis, orci in congue aliquet, diam mauris cursus urna, Id maximus lectus magna maximus.
@@ -262,11 +278,11 @@ name: 'MainPage',
     flex-direction: column;
     flex-basis: 60%;
 }
-
+/*
 .title {
     border-bottom: 3px solid #FCD66C;
     margin-bottom: 2rem;
-}
+}*/
 
 .btn {
     background-color: #FCD66C;
@@ -308,7 +324,7 @@ name: 'MainPage',
 }
 
 .second-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .second-title, .third-title, .fifth-title {
@@ -321,7 +337,7 @@ name: 'MainPage',
 
 .values-title::after {
     background-color: #FCD66C;
-    bottom: 0;
+    bottom: -5px;
     content: '';
     display: block;
     height: 2px;
@@ -333,7 +349,7 @@ name: 'MainPage',
 
 .causes-title::after {
     background-color: #FCD66C;
-    bottom: 0;
+    bottom: -5px;
     content: '';
     display: block;
     height: 2px;
@@ -345,7 +361,7 @@ name: 'MainPage',
 
 .articles-title::after {
     background-color: #FCD66C;
-    bottom: 0;
+    bottom: -5px;
     content: '';
     display: block;
     height: 2px;

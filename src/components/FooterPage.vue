@@ -3,7 +3,7 @@
     <div class="first">
       <div class="first-title-cont">
         <div class="first-title">
-          <h2 class="text-uppercase title text-white">
+          <h2 class="text-uppercase change-title text-white">
             change a life today
           </h2>
         </div>
@@ -35,47 +35,75 @@
     </div>
 
     <div class="third">
-      <div class="socials">
-        <ul>
+      <div class="info-container">
+        <ul class="info">
           <li
-            v-for="objSocial in arrSocials"
-            :key="objSocial"
-            :class="arrSocials.logo"
+            v-for="objInfo in arrInfo"
+            :key="objInfo"
+            class="text-uppercase link"
           >
-            {{ arrSocials.logo }}
+            {{ objInfo.info }}
           </li>
         </ul>
       </div>
-    </div>
-
-    <div class="fourth">
-      <font-awesome-icon icon="fa-brands fa-facebook" />
-      <font-awesome-icon icon="fa-brands fa-instagram" />
-      <font-awesome-icon icon="fa-brands fa-twitter" />
-      <font-awesome-icon icon="fa-brands fa-youtube" />
+      <div class="socials">
+        <font-awesome-icon
+          icon="fa-brands fa-facebook"
+          class="social"
+        />
+        <font-awesome-icon
+          icon="fa-brands fa-instagram"
+          class="social"
+        />
+        <font-awesome-icon
+          icon="fa-brands fa-twitter"
+          class="social"
+        />
+        <font-awesome-icon
+          icon="fa-brands fa-youtube"
+          class="social"
+        />
+      </div>
+      <button
+        class="top"
+        @click="toTop"
+      >
+        <font-awesome-icon icon="fa-solid fa-chevron-up" />
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
 name: 'FooterPage',
 data() {
     return {
-        arrSocials: [
+        arrInfo: [
             {
-                logo: 'fa-brands fa-twitter'
+                info: 'Copyright 2012 - 2020 AVADA THEME BY THEME FUSION'
             },
+
             {
-                logo: 'fa-brands fa-twitter'
+                info: 'ALL RIGHTS RESERVED'
             },
+
             {
-                logo: 'fa-brands fa-twitter'
-            },
-            {
-                logo: 'fa-brands fa-twitter'
+                info: 'POWERED BY WORDPRESS'
             },
         ]
+    }
+},
+mounted() {
+    window.addEventListener('scroll', this.handlescroll);
+},
+methods: {
+    toTop: function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 }
 }
@@ -88,7 +116,7 @@ data() {
     background-position: center;
 }
 
-.title {
+.change-title {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -104,9 +132,9 @@ data() {
     gap: 1rem;
 }
 
-.title::after {
+.change-title::after {
     background-color: #FCD66C;
-    bottom: 0;
+    bottom: -20px;
     content: '';
     display: block;
     height: 2px;
@@ -154,13 +182,58 @@ data() {
     cursor: pointer;
 }
 
-.socials {
+.third {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #F5F5F5;
+    padding: 2rem;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    color: #DADBDB;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
 }
 
 .social {
-    background-color: #FCD66C;
+    background-color: #FFFFFF;
+    color: #FCD66C;
+    height: 20px;
+    padding: .5rem;
+    border-radius: 20rem;
+}
+
+.social:hover {
+    transform: scale(1.25);
+    transition: .5s;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+.top {
+    width: 50px;
     height: 50px;
+    background-color: #464646;
+    color: #DADBDB;
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+}
+
+.top:hover {
+    background-color: #DADBDB;
+    color: #464646;
+    transition: .5s;
 }
 </style>

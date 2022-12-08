@@ -22,11 +22,12 @@ import { faDroplet } from '@fortawesome/free-solid-svg-icons'
 import { faStethoscope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faSeedling } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(faUserSecret)
 
-library.add(faHatWizard, faFacebook, faTwitter, faInstagram, faYoutube, faGlobe, faHeart, faDollarSign, faDroplet, faStethoscope, faGraduationCap, faSeedling)
+library.add(faHatWizard, faFacebook, faTwitter, faInstagram, faYoutube, faGlobe, faHeart, faDollarSign, faDroplet, faStethoscope, faGraduationCap, faSeedling, faChevronUp)
 
 /* add font awesome icon component */
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
